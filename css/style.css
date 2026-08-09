@@ -1,0 +1,634 @@
+/* =========================================================
+   SCIENCE ACADEMY — Official site stylesheet
+   Palette: deep navy + certificate gold, academic serif + clean sans
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy-950: #080f1c;
+    --navy-900: #0d1930;
+    --navy-850: #11213d;
+    --navy-800: #172a4a;
+    --navy-border: #23375c;
+
+    --gold: #c9a24b;
+    --gold-light: #e6c877;
+    --gold-dim: #8a7135;
+
+    --emerald: #2f8f6f;
+
+    --text-primary: #f3f2ec;
+    --text-secondary: #aab3c8;
+    --text-muted: #7a8399;
+
+    --serif: 'Fraunces', 'Georgia', serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    --container: 1080px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(ellipse 900px 500px at 50% -10%, rgba(201, 162, 75, 0.08), transparent),
+        var(--navy-950);
+    color: var(--text-primary);
+    font-family: var(--sans);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a { color: inherit; }
+img { display: block; max-width: 100%; }
+
+:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+/* ---------- Crest / emblem ---------- */
+.crest {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.crest-lg {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 28px auto;
+}
+
+/* ---------- Top utility bar ---------- */
+.topbar {
+    background: var(--navy-950);
+    border-bottom: 1px solid var(--navy-border);
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.topbar-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.topbar-item svg {
+    width: 14px;
+    height: 14px;
+    color: var(--gold);
+    flex-shrink: 0;
+}
+
+a.topbar-item:hover {
+    color: var(--gold-light);
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+    background: linear-gradient(180deg, var(--navy-900), var(--navy-950));
+    border-bottom: 1px solid var(--navy-border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.nav-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.brand-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+}
+
+.brand-tag {
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 6px;
+    list-style: none;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 9px 20px;
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-radius: 999px;
+    border: 1px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+    border-color: var(--navy-border);
+    background: var(--navy-850);
+}
+
+.nav-links a.active {
+    color: var(--navy-950);
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    font-weight: 600;
+}
+
+/* ---------- Page header (interior pages) ---------- */
+.page-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 64px auto 8px auto;
+    padding: 0 24px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+}
+
+.page-header h1 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 2.6rem;
+    color: var(--text-primary);
+}
+
+.page-header p {
+    margin-top: 14px;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+.ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 26px auto 56px auto;
+}
+
+.ornament .line {
+    width: 72px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-dim));
+}
+
+.ornament .line.right {
+    background: linear-gradient(90deg, var(--gold-dim), transparent);
+}
+
+.ornament .diamond {
+    width: 7px;
+    height: 7px;
+    background: var(--gold);
+    transform: rotate(45deg);
+}
+
+/* ---------- Hero (home) ---------- */
+.hero {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 72px 24px 40px 24px;
+    text-align: center;
+}
+
+.hero-frame {
+    border: 1px solid var(--navy-border);
+    border-radius: 4px;
+    padding: 56px 32px;
+    position: relative;
+    background: linear-gradient(180deg, rgba(23, 42, 74, 0.35), transparent);
+}
+
+.hero-frame::before,
+.hero-frame::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--gold-dim);
+}
+
+.hero-frame::before {
+    top: -1px;
+    left: -1px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.hero-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: none;
+    border-top: none;
+}
+
+.hero-eyebrow {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin: 14px 0 18px 0;
+}
+
+.hero-title em {
+    font-style: normal;
+    color: var(--gold);
+}
+
+.hero-sub {
+    max-width: 520px;
+    margin: 0 auto;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+/* ---------- Feature cards ---------- */
+.features {
+    max-width: var(--container);
+    margin: 20px auto 90px auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.feature-card {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-border);
+    border-radius: 14px;
+    padding: 32px 26px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-dim);
+}
+
+.feature-icon {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    color: var(--gold);
+}
+
+.feature-card h3 {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* ---------- Faculty cards ---------- */
+.faculty-list {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px 90px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.teacher-card {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-border);
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--gold-dim);
+}
+
+.teacher-photo {
+    width: 190px;
+    height: 230px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--navy-border);
+    position: relative;
+    background: var(--navy-850);
+}
+
+.teacher-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+}
+
+.teacher-info {
+    flex: 1;
+}
+
+.teacher-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    display: block;
+}
+
+.teacher-role {
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    margin: 6px 0 14px 0;
+}
+
+.teacher-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.teacher-quote {
+    margin-top: 14px;
+    padding-left: 16px;
+    border-left: 2px solid var(--gold-dim);
+    color: var(--gold-light);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* ---------- Student grid ---------- */
+.student-grid {
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: 0 24px 90px 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.student-card {
+    background: var(--navy-900);
+    border: 1px solid var(--navy-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.student-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold-dim);
+}
+
+.student-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-bottom: 1px solid var(--navy-border);
+    background: var(--navy-850);
+}
+
+.student-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 12%;
+    display: block;
+}
+
+.student-body {
+    padding: 18px 20px 22px 20px;
+}
+
+.student-name {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+
+.student-grade {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--navy-950);
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+    margin-top: auto;
+    border-top: 1px solid var(--navy-border);
+    background: var(--navy-950);
+    padding: 32px 24px;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: var(--container);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.footer-contact {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
+.footer-contact a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact a:hover {
+    color: var(--gold-light);
+    text-decoration: underline;
+}
+
+.footer-copy {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .features,
+    .student-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
+    .topbar-inner {
+        padding: 7px 16px;
+        font-size: 0.76rem;
+    }
+
+    .topbar-address {
+        display: none;
+    }
+
+    .nav-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 14px 16px;
+    }
+
+    .brand-tag {
+        display: none;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        padding: 8px 16px;
+        font-size: 0.86rem;
+    }
+
+    .hero-frame {
+        padding: 40px 20px;
+    }
+
+    .teacher-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .teacher-photo {
+        width: 100%;
+        max-width: 240px;
+        height: 240px;
+    }
+
+    .teacher-quote {
+        text-align: left;
+    }
+}
+
+@media (max-width: 560px) {
+    .features,
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .crest {
+        width: 38px;
+        height: 38px;
+    }
+
+    .brand-name {
+        font-size: 1.05rem;
+    }
+
+    .student-photo {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

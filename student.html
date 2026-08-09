@@ -3,180 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Portal</title>
-    <style>
-        /* Global Styles */
-        body {
-            background-color: #121212; 
-            color: #ffffff;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            width: 100%;
-            text-align: center;
-            padding: 25px 0;
-            background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-            border-bottom: 3px solid #ff4757; 
-        }
-
-        header h1 {
-            color: #ff4757; 
-            margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
-            padding: 0 15px;
-        }
-
-        /* Main Container */
-        main {
-            max-width: 850px;
-            width: 90%;
-            margin: 30px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 25px; 
-        }
-
-        /* Profile Card - Modern Flex Layout */
-        .student-card {
-            background-color: #1e1e1e;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: row; /* Desktop par side-by-side */
-            align-items: center;
-            padding: 20px;
-            border: 1px solid #2d2d2d;
-            gap: 25px;
-        }
-
-        /* Card Hover Effect */
-        .student-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(255, 71, 87, 0.15);
-            border-color: #ff4757;
-        }
-
-        /* Student Images */
-        .student-card img {
-            width: 100%;
-            max-width: 220px; /* Desktop par image size normal rakhi hai */
-            height: auto;
-            border-radius: 12px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        /* Student Info Text Wrapper */
-        .card-info {
-            flex: 1;
-            text-align: left; /* Desktop par text left align hoga */
-        }
-
-        .student-card p {
-            color: #e0e0e0;
-            font-size: 1.2rem;
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        .student-card b {
-            color: #ff4757; 
-            font-size: 1.3rem;
-        }
-
-        .student-card i {
-            color: #ffd700; /* Rich Gold */
-            font-size: 1.3rem;
-            font-style: normal;
-            font-weight: bold;
-        }
-
-        /* ========================================== */
-        /* MOBILE RESPONSIVE STYLES (Screen < 600px)  */
-        /* ========================================== */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 1.6rem; /* Mobile par heading choti ho jaye */
-            }
-
-            main {
-                width: 92%;
-                margin: 20px auto;
-                gap: 20px;
-            }
-
-            .student-card {
-                flex-direction: column; /* Mobile par image upar, text neeche */
-                text-align: center;
-                padding: 15px;
-                gap: 15px;
-            }
-
-            .card-info {
-                text-align: center; /* Mobile par text center align ho jaye */
-            }
-
-            .student-card img {
-                max-width: 100%; /* Mobile par image poori width le sakti hai */
-                width: 100%;
-            }
-
-            .student-card p {
-                font-size: 1.05rem; /* Mobile par readable text size */
-            }
-        }
-    </style>
+    <title>Our Students — Umaima Khan Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to the Student Page</h1>
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span class="topbar-item topbar-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Mubarak Pur
+            </span>
+            <a href="tel:+923001217235" class="topbar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                0300 1217235
+            </a>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="crest" viewBox="0 0 100 100" role="img" aria-label="Umaima Khan Academy crest">
+                    <circle cx="50" cy="50" r="47" fill="none" stroke="#c9a24b" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="39" fill="none" stroke="#8a7135" stroke-width="1"/>
+                    <g stroke="#c9a24b" stroke-width="1.5">
+                        <line x1="50" y1="4" x2="50" y2="10"/>
+                        <line x1="50" y1="90" x2="50" y2="96"/>
+                        <line x1="4" y1="50" x2="10" y2="50"/>
+                        <line x1="90" y1="50" x2="96" y2="50"/>
+                        <line x1="17" y1="17" x2="21.5" y2="21.5"/>
+                        <line x1="83" y1="17" x2="78.5" y2="21.5"/>
+                        <line x1="17" y1="83" x2="21.5" y2="78.5"/>
+                        <line x1="83" y1="83" x2="78.5" y2="78.5"/>
+                    </g>
+                    <text x="50" y="61" text-anchor="middle" font-family="Fraunces, serif" font-size="24" font-weight="600" fill="#e6c877">UKA</text>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">Umaima Khan Academy</span>
+                    <span class="brand-tag">Academy of Science · Mubarak Pur</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sir.html">Faculty</a></li>
+                <li><a href="student.html" class="active">Students</a></li>
+            </ul>
+        </div>
     </header>
 
-    <main>
-        <!-- Card 1: Anfal -->
+    <div class="page-header">
+        <span class="eyebrow">Our learners</span>
+        <h1>Our Students</h1>
+        <p>The bright minds working hard every day to make the most of what Umaima Khan Academy offers.</p>
+    </div>
+    <div class="ornament">
+        <span class="line"></span><span class="diamond"></span><span class="line right"></span>
+    </div>
+
+    <main class="student-grid">
+
         <div class="student-card">
-            <img src="anfall.png" alt="Anfal Shah">
-            <div class="card-info">
-                <p>My name is <b>Anfal</b>. I am a student in the 10th grade.</p>
+            <div class="student-photo"><img src="qadir.jpg" alt="Qadir" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Qadir</div>
+                <span class="student-grade">Grade 1</span>
             </div>
         </div>
 
-        <!-- Card 2: Rajab -->
         <div class="student-card">
-            <img src="rajab.png" alt="Rajab Khan">
-            <div class="card-info">
-                <p style="font-style:italic">His name is <b style="color:gold">Rajab Khan</b>.
-                 He is studying in the 9th grade.</p>
+            <div class="student-photo"><img src="efraheem.jpg" alt="Efraheem" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Efraheem</div>
+                <span class="student-grade">Grade 10</span>
             </div>
         </div>
 
-        <!-- Card 3: Sammad -->
         <div class="student-card">
-            <img src="sammad.jpeg" alt="Sammad Joya">
-            <div class="card-info">
-                <p>My name is <b>Sammad Shakh</b>. I am a student in the 9th grade.</p>
+            <div class="student-photo"><img src="anfall.jpg" alt="Anfal" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Anfal</div>
+                <span class="student-grade">Grade 10</span>
             </div>
         </div>
 
-        <!-- Card 4: Jahanzaib -->
         <div class="student-card">
-            <img src="jahanzaib.jpeg" alt="Jahanzaib Khan">
-            <div class="card-info">
-                <p>My name is <b>Jahanzaib Khan</b>. I am a student in the 9th grade.</p>
+            <div class="student-photo"><img src="rajab.jpg" alt="Rajab Khan" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Rajab Khan</div>
+                <span class="student-grade">Grade 9</span>
             </div>
         </div>
+
+        <div class="student-card">
+            <div class="student-photo"><img src="sammad.jpeg" alt="Sammad Shakh" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Sammad Shakh</div>
+                <span class="student-grade">Grade 9</span>
+            </div>
+        </div>
+
+        <div class="student-card">
+            <div class="student-photo"><img src="jahanzaib.jpeg" alt="Jahanzaib Khan" loading="lazy" decoding="async"></div>
+            <div class="student-body">
+                <div class="student-name">Jahanzaib Khan</div>
+                <span class="student-grade">Grade 9</span>
+            </div>
+        </div>
+
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Umaima Khan Academy</span>
+            <span class="footer-contact">Academy of Science, Mubarak Pur &nbsp;·&nbsp; <a href="tel:+923001217235">0300 1217235</a></span>
+            <span class="footer-copy">&copy; 2026 Umaima Khan Academy. All rights reserved.</span>
+        </div>
+    </footer>
 
 </body>
 </html>

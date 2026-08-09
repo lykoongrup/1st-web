@@ -3,204 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sir Page - Faculty</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Screenshot jaisa premium dark background */
-        body {
-            background-color: #141414;
-            color: #ffffff;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Top Header Area */
-        header {
-            text-align: center;
-            width: 100%;
-            margin-bottom: 30px;
-        }
-
-        /* Red ki jagah khubsurat premium Blue title */
-        h1 {
-            color: #38bdf8; /* Bright Premium Sky Blue */
-            font-size: 2.5rem;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            padding-bottom: 20px;
-        }
-
-        /* Screenshot jasi divider line - Blue theme me */
-        .divider {
-            width: 100%;
-            height: 2px;
-            background-color: #0284c7; /* Darker professional blue line */
-            margin-bottom: 40px;
-        }
-
-        /* Main Container */
-        .faculty-list {
-            width: 100%;
-            max-width: 950px; /* Screenshot ke mutabiq wide card structure */
-            display: flex;
-            flex-direction: column;
-            gap: 30px; /* Cards ke darmiyan gap */
-        }
-
-        /* Screenshot jasa Rounded Dark Card Layout */
-        .teacher-card {
-            background-color: #1e1e1e;
-            border-radius: 20px;
-            border: 1px solid #2d2d2d;
-            padding: 30px;
-            display: flex;
-            flex-direction: row; /* Image left, Text right */
-            align-items: center;
-            gap: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        /* Card par halka sa blue glow hover effect */
-        .teacher-card:hover {
-            transform: translateY(-3px);
-            border-color: #0284c7;
-        }
-
-        /* Image Styling - Screenshot jasi rounded corners wali */
-        .image-box {
-            width: 260px;
-            height: 280px;
-            flex-shrink: 0; /* Image size ko fix rakhne ke liye */
-            border-radius: 18px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-        }
-
-        .image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Text Content Styling */
-        .info-box {
-            flex-grow: 1;
-            font-size: 1.25rem; /* Light and clean text like screenshot */
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        /* Highlighted Names - Screenshot jase styling me premium Blue colors */
-        .highlight-blue {
-            color: #38bdf8; /* Soft Electric Blue */
-            font-weight: 600;
-        }
-
-        .highlight-sub {
-            color: #0ea5e9; /* Deep Sky Blue for descriptions */
-            font-weight: 500;
-        }
-
-        /* Special Gold tag for Sir Saqib as per your original data but in modern tone */
-        .gold-text {
-            color: #fbbf24; 
-            font-style: italic;
-            display: block;
-            margin-top: 10px;
-            font-size: 1.1rem;
-        }
-
-        /* --------------------------------------
-           MOBILE & TABLET RESPONSIVE FIX
-        -------------------------------------- */
-        @media (max-width: 768px) {
-            body {
-                padding: 20px 15px;
-            }
-
-            h1 {
-                font-size: 1.8rem;
-            }
-
-            /* Mobile par content row se column (ooper-neeche) ho jayega */
-            .teacher-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-                gap: 20px;
-            }
-
-            .image-box {
-                width: 100%;
-                max-width: 260px; /* Mobile par bhi perfect size rahega */
-                height: 260px;
-            }
-
-            .info-box {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <title>Our Faculty — Umaima Khan Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Welcome to the Sir Page</h1>
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span class="topbar-item topbar-address">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Mubarak Pur
+            </span>
+            <a href="tel:+923001217235" class="topbar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                0300 1217235
+            </a>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <svg class="crest" viewBox="0 0 100 100" role="img" aria-label="Umaima Khan Academy crest">
+                    <circle cx="50" cy="50" r="47" fill="none" stroke="#c9a24b" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="39" fill="none" stroke="#8a7135" stroke-width="1"/>
+                    <g stroke="#c9a24b" stroke-width="1.5">
+                        <line x1="50" y1="4" x2="50" y2="10"/>
+                        <line x1="50" y1="90" x2="50" y2="96"/>
+                        <line x1="4" y1="50" x2="10" y2="50"/>
+                        <line x1="90" y1="50" x2="96" y2="50"/>
+                        <line x1="17" y1="17" x2="21.5" y2="21.5"/>
+                        <line x1="83" y1="17" x2="78.5" y2="21.5"/>
+                        <line x1="17" y1="83" x2="21.5" y2="78.5"/>
+                        <line x1="83" y1="83" x2="78.5" y2="78.5"/>
+                    </g>
+                    <text x="50" y="61" text-anchor="middle" font-family="Fraunces, serif" font-size="24" font-weight="600" fill="#e6c877">UKA</text>
+                </svg>
+                <span class="brand-text">
+                    <span class="brand-name">Umaima Khan Academy</span>
+                    <span class="brand-tag">Academy of Science · Mubarak Pur</span>
+                </span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sir.html" class="active">Faculty</a></li>
+                <li><a href="student.html">Students</a></li>
+            </ul>
+        </div>
     </header>
-    
-    <!-- Top Horizontal Line like the image -->
-    <div class="divider"></div>
+
+    <div class="page-header">
+        <span class="eyebrow">Meet the mentors</span>
+        <h1>Our Faculty</h1>
+        <p>Dedicated teachers whose experience and care shape every student who studies here.</p>
+    </div>
+    <div class="ornament">
+        <span class="line"></span><span class="diamond"></span><span class="line right"></span>
+    </div>
 
     <main class="faculty-list">
 
-        <!-- Teacher 1: Sir Naseer -->
         <div class="teacher-card">
-            <div class="image-box">
-                <img src="naseer.png" alt="Sir Naseer">
+            <div class="teacher-photo">
+                <img src="naseer.jpg" alt="Sir Naseer" loading="lazy" decoding="async">
             </div>
-            <div class="info-box">
-                My mentor is <span class="highlight-blue">Sir Naseer</span>. He is an <span class="highlight-sub">Expert Mathematician</span>.
-                <br><br>
-                <span style="color: #05f5ed; font-size: 1.1rem; font-style: italic;">
-                    "Highly Respected Mentor Winning Hearts through Education"
-                </span>
+            <div class="teacher-info">
+                <span class="teacher-name">Sir Naseer</span>
+                <span class="teacher-role">Expert Mathematician</span>
+                <p class="teacher-desc">A highly respected mentor known for making mathematics clear, approachable, and genuinely enjoyable to learn.</p>
+                <p class="teacher-quote">"Highly Respected Mentor Winning Hearts through Education"</p>
             </div>
         </div>
 
-        <!-- Teacher 2: Sir Saqib -->
         <div class="teacher-card">
-            <div class="image-box">
-                <img src="saqib.png" alt="Sir Saqib">
+            <div class="teacher-photo">
+                <img src="saqib.jpg" alt="Sir Saqib" loading="lazy" decoding="async">
             </div>
-            <div class="info-box">
-                Our senior lecturer is <span class="highlight-blue">Sir Saqib</span> (M.A. English). 
-                <br>
-                <span class="gold-text">Most Experienced & Respected Teacher of our Academy</span>
+            <div class="teacher-info">
+                <span class="teacher-name">Sir Saqib</span>
+                <span class="teacher-role">Senior Lecturer · M.A. English</span>
+                <p class="teacher-desc">The most experienced and respected teacher of our academy, trusted by generations of students.</p>
             </div>
         </div>
 
-        <!-- Teacher 3: Sir Babar Khan -->
         <div class="teacher-card">
-            <div class="image-box">
-                <img src="babar.png" alt="Sir Babar khan">
+            <div class="teacher-photo">
+                <img src="babar.jpg" alt="Sir Babar khan" loading="lazy" decoding="async">
             </div>
-            <div class="info-box">
-                This is <span class="highlight-blue">Sir Babar khan</span>. He serves as a <span class="highlight-sub">Senior Lecturer</span> holding an M.A. in English.
+            <div class="teacher-info">
+                <span class="teacher-name">Sir Babar Khan</span>
+                <span class="teacher-role">Senior Lecturer · M.A. English</span>
+                <p class="teacher-desc">Brings years of teaching experience and a steady, encouraging presence to every classroom.</p>
             </div>
         </div>
 
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Umaima Khan Academy</span>
+            <span class="footer-contact">Academy of Science, Mubarak Pur &nbsp;·&nbsp; <a href="tel:+923001217235">0300 1217235</a></span>
+            <span class="footer-copy">&copy; 2026 Umaima Khan Academy. All rights reserved.</span>
+        </div>
+    </footer>
 
 </body>
 </html>
