@@ -31,6 +31,9 @@
         // ---- phase timings, scaled to activeMs ----
         var plaqueDur = clamp(activeMs * 0.22, 260, 600);
 
+        var crestDelay = plaqueDur * 0.35;
+        var crestDur   = clamp(activeMs * 0.16, 200, 500);
+
         var cornerDelay = plaqueDur * 0.4;
         var cornerDur   = clamp(activeMs * 0.15, 180, 500);
 
@@ -66,6 +69,7 @@
 
         // ---- apply ----
         setAnim(splash.querySelector('.spl-plaque'), plaqueDur, 0);
+        setAnim(splash.querySelector('.spl-crest'), crestDur, crestDelay);
 
         var corners = splash.querySelectorAll('.spl-corner');
         for (var i = 0; i < corners.length; i++) {

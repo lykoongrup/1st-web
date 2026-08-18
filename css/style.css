@@ -309,6 +309,56 @@ a.topbar-item:hover {
     font-size: 1.05rem;
 }
 
+.hero-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    font-family: var(--sans);
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    border: 1px solid transparent;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.btn svg {
+    flex-shrink: 0;
+}
+
+.btn-primary {
+    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+    color: var(--navy-950);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(201, 162, 75, 0.28);
+}
+
+.btn-ghost {
+    background: var(--navy-900);
+    color: var(--text-primary);
+    border-color: var(--navy-border);
+}
+
+.btn-ghost:hover {
+    transform: translateY(-2px);
+    color: var(--gold-light);
+    border-color: var(--gold-dim);
+}
+
 /* ---------- Feature cards ---------- */
 .features {
     max-width: var(--container);
@@ -549,6 +599,12 @@ a.topbar-item:hover {
     font-size: 0.8rem;
 }
 
+.footer-credit {
+    color: var(--text-muted);
+    font-size: 0.76rem;
+    opacity: 0.85;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
     .features,
@@ -717,6 +773,18 @@ a.topbar-item:hover {
     align-items: center;
     justify-content: center;
     opacity: 0;
+    animation-name: spl-fade-up;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+}
+
+.spl-crest {
+    width: 58px;
+    height: 58px;
+    display: block;
+    margin: 0 auto 4px auto;
+    opacity: 0;
+    filter: drop-shadow(0 0 12px rgba(240, 200, 105, 0.4));
     animation-name: spl-fade-up;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
@@ -917,6 +985,7 @@ a.topbar-item:hover {
 
 @media (max-width: 480px) {
     .spl-plaque { padding: 30px 20px; }
+    .spl-crest { width: 46px; height: 46px; }
     .spl-flourish svg { width: 22px; height: 12px; }
     .spl-ornament .spl-cline { width: 24px; }
     .spl-eyebrow { font-size: 0.58rem; letter-spacing: 2.5px; }
